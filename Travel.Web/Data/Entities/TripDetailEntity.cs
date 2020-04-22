@@ -22,5 +22,7 @@ namespace Travel.Web.Data.Entities
         public string PicturePath { get; set; }
 
         public TripEntity Trip { get; set; }
+
+        public ExpenseTypeEntity ExpenseType { get; set; }
     }
 }

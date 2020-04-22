@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Travel.Web.Data.Entities;
 
 namespace Travel.Web.Data.Entities
 {
@@ -28,11 +27,15 @@ namespace Travel.Web.Data.Entities
         [Display(Name = "End Date")]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd hh:mm}", ApplyFormatInEditMode = false)]
         public DateTime? EndDateLocal => EndDate?.ToLocalTime();
-        
-        public float TotalAmount { get; }
+
+        public EmployeeEntity Employee { get; set; }
 
         public CityEntity City { get; set; }
 
         public ICollection<TripDetailEntity> TripDetails { get; set; }
+
+        [Display(Name = "Total Amount")]
+        [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
+        public decimal TotalAmount { get; set; }
     }
 }

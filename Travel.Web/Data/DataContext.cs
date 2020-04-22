@@ -16,6 +16,10 @@ namespace Travel.Web.Data
 
         public DbSet<TripDetailEntity> TripDetails { get; set; }
 
+        public DbSet<EmployeeEntity> Employees { get; set; }
+
+        public DbSet<ExpenseTypeEntity> ExpenseTypes { get; set; }
+
 
     }
 }
