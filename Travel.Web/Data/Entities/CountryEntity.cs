@@ -11,6 +11,5 @@ namespace Travel.Web.Data.Entities
         public string Name { get; set; }
 
         public ICollection<CityEntity> Cities { get; set; }
-
     }
 }
