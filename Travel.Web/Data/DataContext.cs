@@ -20,6 +20,15 @@ namespace Travel.Web.Data
 
         public DbSet<ExpenseTypeEntity> ExpenseTypes { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<CountryEntity>()
+                .HasIndex(c => c.Name)
+                .IsUnique();
+
+        }
 
     }
 }
